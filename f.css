@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+    /* height: 1000vh; */
+    min-width: 270px;
+}
+
+:root {
+    font-size: 10px;
+    --Second_font: 'Satisfy', cursive;
+    --headfont: clamp(4.6rem, 5vw, 6rem);
+    --subhead: clamp(3.5rem, 3.5vw, 4.5rem);
+    --subpara: clamp(1.7rem, 2vw, 2.2rem);
+    --parafont: clamp(1.8rem, 1.9vw, 2.7rem);
+    --small: clamp(1.4rem, 1.5vw, 2rem);
+    --marginT_B: clamp(5rem, 7vw, 10rem);
+    --Btn_top_padding: clamp(0.4rem, 0.9vw, 0.7rem);
+    --color1: #6A1B9A;
+    --color2: rgb(197 116 0);
+}
+
+.wrapper {
+    width: clamp(250px, 100%, 1600px);
+    height: clamp(400px, 68vh, 900px);
+    margin: 0.5rem auto;
+    margin-bottom: 4rem;
+    background: var(--color1);
+    background: linear-gradient( 225deg, var(--color1) 0%, rgb(63 0 34 / 75%) 22%, rgb(84 0 0 / 59%) 78%, rgb(255 153 9) 100%), url(/Svg/art.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+
+/* navbar */
+
+nav {
+    display: flex;
+    /* border: 1px solid white; */
+    width: clamp(250px, 100%, 1600px);
+    margin: auto;
+    height: clamp(65px, 10vh, 100px);
+    align-items: center;
+    background: var(--color1);
+    /* background: linear-gradient( 56deg, purple 37%, rgb(197 116 0) 54%); */
+    justify-content: space-around;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    /* position: relative; */
+}
+
+nav ul a {
+    text-decoration: none;
+    font-size: var(--small);
+    margin-right: 4rem;
+    color: white;
+    position: relative;
+    /* font-weight: bold; */
+    letter-spacing: 0.1rem;
+}
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: yellow;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+nav ul a:hover:after {
+    width: 100%;
+}
+
+nav ul a:hover:active {
+    width: 100%;
+}
+
+nav h1 {
+    font-size: var(--subhead);
+    color: white;
+    font-family: var(--Second_font);
+}
+
+
+/* Navigation ends here */
+
+.wrapper h1 {
+    font-size: var(--headfont);
+    text-align: center;
+    margin: 0;
+    width: fit-content;
+    position: relative;
+    font-family: 'Satisfy', cursive;
+}
+
+.wrapper h1::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    border-radius: 4px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(56deg, rgb(223, 1, 223) 37%, rgb(255 152 5) 54%);
+}
+
+.innerwrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(200px, 45%, 1000px);
+    height: 90%;
+}
+
+.wrapper p {
+    font-size: var(--parafont);
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    /* padding: 0.7rem 3rem; */
+    padding: var(--Btn_top_padding) 0;
+    width: clamp(4rem, 7vw, 12rem);
+    text-align: center;
+    border-radius: 2px;
+    font-size: var(--small);
+    /* font-weight: bolder; */
+    letter-spacing: 0.2rem;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.yellow {
+    background: rgb(197 116 0);
+}
+
+.page {
+    width: clamp(240px, 95vw, 1200px);
+    margin: var(--marginT_B) auto;
+    border: 2px solid green;
+}
+
+
+/* my info */
+
+.myinfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+}
+
+.infoleft {
+    width: 40%;
+    display: grid;
+    place-items: center;
+}
+
+.infoleft img {
+    width: clamp(20rem, 60%, 30rem);
+}
+
+.inforight {
+    width: 60%;
+}
+
+.inforight p {
+    font-size: var(--subpara);
+    text-align: justify;
+}
+
+.inforight h1 {
+    font-size: var(--subhead);
+    color: purple;
+    font-family: 'Satisfy', cursive;
+}
+
+
+/* Info ends here */
+
+.cards {
+    width: 100%;
+    display: grid;
+    border: 2px solid red;
+    margin: var(--marginT_B) 0;
+    gap: 2rem;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.cont {
+    outline: 1px solid;
+    align-self: center;
+    width: calc(100% - 3rem);
+    height: clamp(250px, 35vh, 300px);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(1rem, 3vw, 4rem) clamp(0.99rem, 1vw, 2rem)
+}
+
+.cont h1 {
+    font-size: var(--subhead);
+    margin: 0;
+}
+
+.cont p {
+    font-size: var(--subpara);
+    text-align: center;
+    margin: 0;
+    margin-bottom: clamp(1rem, 1vw, 2rem);
+}
+
+.card1 {
+    color: white;
+    background: linear-gradient(rgb(204 108 0 / 93%), rgb(136 0 0 / 71%)), url(/Svg/box2.jpg);
+}
+
+.card2 {
+    color: white;
+    background: linear-gradient(#dc0000d6, #3a003ede), url(/Svg/box3.jpg);
+}
+
+.card3 {
+    color: white;
+    background: linear-gradient(rgb(64 0 150 / 81%), rgb(0 4 78 / 78%)), url(../Svg/box1.jpg);
+}
+
+.cont a {
+    display: block;
+    background-color: white;
+    color: purple;
+    /* outline: 2px solid white; */
+    text-decoration: none;
+    padding: clamp(0.4rem, 0.9vw, 0.7rem) clamp(2.2rem, 1.5vw, 3rem);
+    border-radius: 2px;
+    font-size: var(--small);
+    /* font-weight: bolder; */
+    letter-spacing: 0.1rem;
+}
+
+
+/* Cards done over here */
+
+.gallery {
+    display: grid;
+    grid-template-columns: clamp(100px, 40%, 350px) 1fr clamp(100px, 40%, 350px);
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    height: clamp(480px, 70vh, 600px);
+    background: linear-gradient( 177deg, #00000099, transparent), url(../Svg/g.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    grid-template-areas: 'box1 box1 box2' 'box3 box4 box4''box5 box5 box6';
+    place-items: center;
+    color: white;
+    /* gap: 8px; */
+}
+
+.box {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border: clamp(0.8rem, 1vw, 1.3rem) solid white;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: var(--subhead);
+    font-family: 'Satisfy', cursive;
+}
+
+.box img {
+    width: clamp(6rem, 30%, 9rem);
+    display: block;
+}
+
+.box h1 {
+    font-size: var(--subpara);
+}
+
+.box1 {
+    grid-area: box1;
+    border-left: none;
+    border-top: none;
+}
+
+.box2 {
+    grid-area: box2;
+    width: 100%;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    background: white;
+    background: linear-gradient( #ff06f8, #b50046);
+}
+
+.box3 {
+    grid-area: box3;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    height: 100%;
+    background: linear-gradient(#00d4cd, #29bb01);
+    /* background: white; */
+}
+
+.box4 {
+    grid-area: box4;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    height: 100%;
+}
+
+.box5 {
+    grid-area: box5;
+    border-left: none;
+    border-bottom: none;
+}
+
+.box6 {
+    grid-area: box6;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    width: 100%;
+    /* background: white; */
+    background: linear-gradient(blue, red);
+}
+
+
+/* Skills starts from here */
+
+.skill {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    height: auto;
+    margin: var(--marginT_B) auto;
+}
+
+.sleft>h1 {
+    margin: 0;
+}
+
+.sright {
+    width: 40%;
+    display: grid;
+    place-items: center;
+    height: auto;
+    /* background: linear-gradient( 223deg, #db05ff, #0027ffc4); */
+}
+
+.sright img {
+    width: clamp(20rem, 80%, 40rem);
+    height: 100%;
+}
+
+.sleft {
+    width: 60%;
+}
+
+.Cont {
+    padding: 0 0 clamp(2rem, 3vw, 4rem) 0;
+    border: 2px solid purple;
+}
+
+.sleft>h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: var(--subhead);
+    color: purple;
+    text-align: center;
+}
+
+.progress {
+    /* min-width: 200px; */
+    width: 80%;
+    margin: auto;
+}
+
+.progress h1 {
+    font-size: var(--parafont);
+}
+
+.bar {
+    width: 100%;
+    /* border: 2px solid red; */
+    height: 25px;
+    background: rgba(255, 255, 255, 0.596);
+    border-radius: 4rem;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to right, #ffc107, #e91e63);
+    border-radius: 4rem;
+}
+
+.bar1 span {
+    width: 100%;
+}
+
+.bar2 span {
+    width: 50%;
+}
+
+.bar4 span {
+    width: 60%;
+}
+
+
+/* skills ends over here */
+
+.carousel {
+    height: clamp(700px, 100vh, 700px);
+    display: flex;
+    border: 2px solid brown;
+    flex-direction: column;
+    margin-bottom: var(--marginT_B);
+    text-align: center;
+}
+
+.carousel h1 {
+    font-family: var(--Second_font);
+    font-size: var(--subhead);
+    text-align: center;
+    color: var(--color1);
+}
+
+.carousel>h1 {
+    height: 50px;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(1rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
+    /* height: clamp(30rem, 70vh, 50rem); */
+    /* border: 2px solid black; */
+    box-shadow: rgb(50 50 93 / 25%) 0px 1px 15px -17px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 12px -5px inset;
+    border-radius: 10px;
+    margin-bottom: var(--marginT_B);
+}
+
+.slide img {
+    width: clamp(100px, 100%, 300px);
+}
+
+.slide>div {
+    width: clamp(100px, 40%, 400px);
+    height: clamp(100px, 40%, 400px);
+    display: grid;
+    place-items: center;
+}
+
+.slide figcaption {
+    font-size: var(--small);
+    margin: clamp(1rem, 2vw, 3rem) 0;
+}
+
+.slide h1 {
+    font-size: var(--parafont);
+    margin: 0;
+    margin-top: clamp(1rem, 2vw, 4rem);
+}
+
+.glide {
+    height: clamp(35rem, 50vw, 50rem);
+}
+
+.glide__track {
+    /* border: 2px solid purple; */
+    height: 100%;
+}
+
+.glide__slide {
+    /* border: 2px solid blue; */
+    height: 100%;
+}
+
+.glide__slides {
+    /* border: 5px solid yellow; */
+    height: 100%;
+}
+
+
+/* Button isnside slides */
+
+.button {
+    background-color: var(--color1);
+    padding: clamp(0.4rem, 1vw, 1rem) clamp(2.2rem, 1.5vw, 3rem);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: calc(var(--small) - 2px);
+    border-radius: 10px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.glide__arrow {
+    font-size: var(--parafont);
+    background-color: var(--color2);
+}
+
+
+/* Carousel ends over here  */
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid blue;
+    color: white;
+    background: linear-gradient(to right, #DA4453, #89216B);
+}
+
+.cleft {
+    width: 40%;
+    border: 2px solid green;
+    display: grid;
+    place-items: center;
+}
+
+.cright h1 {
+    font-size: var(--subhead);
+    font-family: var(--Second_font);
+}
+
+.cright {
+    width: 60%;
+    border: 2px solid red;
+    padding: 0 clamp(3rem, 4vw, 5rem);
+}
+
+.label {
+    height: clamp(3rem, 5vw, 5rem);
+    position: relative;
+    font-size: var(--small);
+    position: relative;
+    border-bottom: 2px solid #fffe00;
+}
+
+label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+label>span {
+    position: absolute;
+    bottom: 0px;
+    padding: 0 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.cright input[type="text"] {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    padding-top: 15px;
+    outline: none;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: var(--small);
+}
+
+input:focus+label>span {
+    transform: translateY(-150%);
+    color: #fffe00;
+    font-size: calc(var(--small) - 4px);
+}
+
+.cleft img {
+    width: clamp(20rem, 70%, 40rem);
+}
+
+
+/* Media queries do not i repeat touch it */
+
+@media screen and (max-width: 800px) {
+    /* .glide {
+        height: clamp(40rem, 60vh, 50rem);
+    } */
+    .slide>div {
+        width: clamp(100px, 50%, 500px);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* Info section */
+    .myinfo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .myinfo p {
+        text-align: center;
+    }
+    .myinfo h1 {
+        text-align: center;
+    }
+    .inforight {
+        width: 100%;
+        text-align: center;
+    }
+    /* Skiills section over here */
+    .skill {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .sright {
+        order: 1;
+    }
+    .sleft {
+        order: 2;
+        width: 100%;
+    }
+    .sleft>h1 {
+        margin: calc(var(--marginT_B) - 5px) 0;
+    }
+    /* .glide {
+        height: clamp(40rem, 60vh, 50rem);
+    } */
+}
+
+@media screen and (max-width: 600px) {
+    .glide__arrows button,
+    svg {
+        transform: scale(0.8);
+        border-radius: 50%;
+    }
+    /* .glide {
+        height: clamp(30rem, 60vh, 40rem);
+    } */
+}
